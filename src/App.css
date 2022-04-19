@@ -1,38 +1,302 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url("//fonts.googleapis.com/css?family=Work+Sans:300,400,600");
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+*,::before,::after {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.task-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 30px;
+  
+  font-size: 30px;
+  color: white;
+  text-decoration: underline;
+  background-image: linear-gradient(45deg, blue, yellow);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Cards
+*/
+
+.cards-box {
+  display: flex;
+  align-items: flex-start;
+  width: 70%;
+  margin-bottom: 30px;
+  padding: 20px;
+
+  border: 2px solid tan;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card {
+  width: 250px;
+
+  border: 2px solid aqua;
+}
+
+img {
+  width: 246px;
+  object-fit: contain;
+}
+
+.card:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+.card-content {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.card-button {
+  padding: 5px 10px;
+  
+  background-color: aqua;
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  outline: none;
+  border: 2px solid blue;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+/* Декомпозиция
+*/ 
+.top-block {
+  display: flex;
+  width: 900px;
+}
+
+.news-box {
+  width: 70%;
+}
+
+.adv-box {
   display: flex;
   flex-direction: column;
+  width: 30%;
+}
+
+.news-box_header {
+  display: flex;
+  padding-left: 30px;
   align-items: center;
+}
+
+.news-box_title {
+  margin-right: 20px;
+  color: blue;
+  font-weight: 700;
+  font-size: 18px;
+
+  cursor: pointer;
+}
+
+.news-box_date {
+  color: gray;
+}
+
+.news-list {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.news-list_new {
+  margin-bottom: 10px;
+}
+
+.new-link {
+  display: flex;
+  align-items: center;
+  color: initial;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.new_img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+
+  background-image: url("./img/favicon.ico");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.financial-news {
+  display: flex;
+  padding: 10px 0 10px 30px;
+}
+
+.financial-news_new:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+.fin_title {
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.fin_cource {
+  margin: 5px;
+  font-weight: 700;
+  color: gray;
+}
+
+.fin_change {
+  font-size: 14px;
+  color: darkgray;
+}
+
+.adv-preview {
+  width: 100px;
+  height: 100px;
+
+  background-image: url('./img/favicon.ico');
+  background-repeat: no-repeat;
+  background-position: contain;
+  background-size: 100px;
+}
+
+.adv-link {
+  color: blue;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+.search-block {
+  width: 900px;
+  margin-bottom: 20px;
+}
+
+.search_categories {  
+  display: flex;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-left: 30px;
+}
+
+.search-category {
+  margin-right: 10px;
+  color: blue;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.search-example {
+  padding-left: 30px;
+}
+
+.search-example_link {
+  color: gray;
+  text-decoration: none;
+}
+
+.search-input {
+  position: relative;
+  padding-left: 30px;
+}
+
+.logo {
+  position: absolute;
+  left: -95px;
+  top: -17px;
+  font-size: 40px;
+  letter-spacing: -3px;
+  text-decoration: none;
+  color: initial;
+}
+
+.logo:first-letter {
+  color: red;
+}
+
+.search_input-field {
+  width: 600px;
+  height: 30px;
+
+  border: 2px solid gold;
+  outline: none;
+}
+
+.search_btn {
+  width: 90px;
+  height: 30px;
+  background-color: gold;
+  border: none;
+  outline: none
+}
+
+.banner {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+
+  width: 700px;
+  height: 50px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+
   color: white;
+  font-size: 30px;
+  border: 2px solid gray;
+  background-color: violet;
 }
 
-.App-link {
-  color: #61dafb;
+.articles-box {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30px;
+  margin-bottom: 100px;
+  width: 700px;
+
+  flex-wrap: wrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.article-item {
+  width: 300px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 2px solid green;
+}
+
+.article-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.article-content.weather {
+  display: flex;
+  align-items: center;
+}
+
+.weather-preview {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+
+  background-image: url('./img/favicon.ico');
+  background-repeat: no-repeat;
+  background-position: contain;
+  background-size: 50px;
+}
+
+.weather-temp {
+  font-size: 20px;
+  font-weight: 700;
+  margin-right: 10px;
 }
